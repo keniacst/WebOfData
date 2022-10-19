@@ -1,0 +1,34 @@
+@base <http://users.dcc.uchile.cl/~ahogan/foaf.ttl> .
+
+@prefix ah: <http://users.dcc.uchile.cl/~ahogan/foaf.ttl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix social: <http://users.dcc.uchile.cl/~ahogan/social.ttl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix wd: <http://www.wikidata.org/entity/>.
+@prefix dbr: <http://dbpedia.org/resource/>.
+
+<> a foaf:Document ;
+   dc:date "2021-10-27"^^xsd:date ;
+   dc:title "Kenia's FOAF Profile"@en ;
+   foaf:primaryTopic <#kc> ;
+   dc:creator <#kc> .
+
+<#kc> a foaf:Person ;
+   rdfs:label "Kenia Castillo" ;
+   rdfs:comment " Computer Engineering student"@es , "Estudiante de Ingeniería Civil en Computación"@es ;
+   foaf:name "Kenia Castillo" ;
+   foaf:givenName "Kenia" ;
+   foaf:familyName "Castillo" ;
+   foaf:age 23 ; # it would be better to put date of birth to not have to update every birthday, but hey :)
+   foaf:img <https://i.imgur.com/jqOzoib.png> ;
+   foaf:knows <https://users.dcc.uchile.cl/~ahogan/foaf.ttl#dh> , <http://anakena.dcc.uchile.cl/~jasalas/web/foaf.ttl#me> ;
+   foaf:interest dbr:Software_development , 
+   dbr:Front-end_web_development , dbr:Photography ; 
+   social:hasEnemy <http://users.dcc.uchile.cl/~ahogan/abot.ttl#ab> 
+   social:likesMovie dbr:Interestellar , dbr:Wall-E , dbr:Tangled;
+   social:hasSpiritAnimal dbr:Raccoon ;
+   social:hasFavouritePlatonicSolid dbr:Octahedron ;
+   foaf:myersBriggs "ENFP" .
